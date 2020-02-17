@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fast Med</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <!--    Activities title-->
+    <string name="patient_detail_title">Detil Pasien</string>
+
+    <!--    Fragments' title-->
+    <string name="pending_page_title">Tunda</string>
+    <string name="process_page_title">Proses</string>
+    <string name="pickedup_page_title">Diantar</string>
+    <string name="finish_page_title">Selesai</string>
+
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+</resources>

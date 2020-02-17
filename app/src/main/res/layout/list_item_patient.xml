@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="patient"
+            type="id.sardjito.fastmed.models.PatientsItem"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_side_margin"
+        android:layout_marginEnd="@dimen/card_side_margin"
+        android:layout_marginBottom="@dimen/card_bottom_margin"
+        android:onClick="@{clickListener}"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardElevation="@dimen/card_elevation"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding"
+            >
+            <TextView
+                android:id="@+id/item_patient_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@{patient.name}"
+                android:layout_marginBottom="@dimen/entitiy_bottom_margin"
+                />
+            <TextView
+                android:id="@+id/item_patient_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{patient.createdAt}"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
