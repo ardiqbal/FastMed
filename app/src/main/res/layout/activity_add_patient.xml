@@ -161,6 +161,7 @@
                         android:layout_marginBottom="@dimen/entitiy_bottom_margin"
                         android:layout_marginStart="@dimen/entitiy_right_margin"
                         android:src="@drawable/ic_photo_camera"
+                        android:onClick="@{(view) -> viewmodel.onImageClick(view)}"
                         />
                 </LinearLayout>
             </LinearLayout>
@@ -169,7 +170,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tambah Pasien"
-                android:onClick="@{() -> viewmodel.onLike()}"
                 />
         </LinearLayout>
     </ScrollView>

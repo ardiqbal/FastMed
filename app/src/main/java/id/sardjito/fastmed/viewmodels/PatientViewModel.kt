@@ -1,8 +1,12 @@
 package id.sardjito.fastmed.viewmodels
 
+import android.app.Activity
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 import id.sardjito.fastmed.models.Patient
 import id.sardjito.fastmed.repositories.PatientRepository
 import timber.log.Timber
@@ -24,7 +28,9 @@ class PatientViewModel @Inject constructor(
 
     suspend fun getPatientDetail(id: String) = patientRepository.getPatientDetail(id)
 
-    fun onLike() {
-        Timber.d(name.value)
+    fun onImageClick(view: View) {
+        CropImage.activity()
+            .setGuidelines(CropImageView.Guidelines.ON)
+            .start(view.context as Activity)
     }
 }
